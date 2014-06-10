@@ -1,0 +1,30 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.header{
+    border:solid 20px #000;
+}
+
+.jumbotron{
+    margin: auto;
+    width: 500px;
+
+}
+.actividades{
+    margin-top: 5%;
+}
+.status-table{
+    padding: 5px;
+}
+.menu{
+    margin-top: 20px;
+    display: inline-block;
+}
+.search{
+    margin-top: 20px;
+}

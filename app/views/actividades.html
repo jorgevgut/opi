@@ -1,0 +1,44 @@
+<div class="menu col-xs-3">
+    <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#/actividades">Actividades</a></li>
+        <li><a href="#/add-actividad">Ingresar Actividad</a></li>
+    </ul>
+</div>
+<div class="search col-xs-offset-8">
+    <div class="form-group">
+    <label for="">Buscar:</label>
+        <input type="search" class="form-control" ng-model="search">
+    </div>
+</div>
+<div class="actividades">
+    <table class="table ">
+        <thead>
+            <tr>
+                <th><h3>Nombre</h3></th>
+                <th>Municipio</th>
+                <th>Monto</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="activity in activiades | filter : search">
+                <td>
+                    <h4>{{activity.name}}</h4>
+                    <p>{{activity.description}}</p>
+                </td>
+                <td>{{activity.municipio}}</td>
+                <td>{{activity.monto | currency}}</td>
+                <td><p class="status-table bg-warning">{{activity.statu}}</p> </td>
+            </tr> 
+<!--             <tr>
+                <td>
+                    <h4>Nueva tarea</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                </td>
+                <td>Carlos</td>
+                <td>Municipio</td>
+                <td><p class=" status-table bg-success">Autorizado</p></td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>

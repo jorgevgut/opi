@@ -1,0 +1,32 @@
+<div class="menu">
+    <ul class="nav nav-pills pull-right">
+        <li><a href="#/actividades">Actividades</a></li>
+        <li class="active"><a href="#/add-actividad">Ingresar Actividad</a></li>
+    </ul>
+</div>
+<div class="actividades">
+<p>{{actividad}}</p>
+    <div class="jumbotron">
+        <form action="" method="POST" role="form" >
+        <legend>Ingresa la Actividad</legend>
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input ng-model="actividad.name" type="text" class="form-control" id="" placeholder="Ingresa el nombre de la actividad" required>
+          </div> 
+          <div class="form-group">
+              <label for="">Descripción:</label>
+              <input type="text" ng-model="actividad.description" class="form-control" id="" placeholder="ingresa tu descripción" required>
+          </div>  
+          <div class="form-group">
+              <label for="">Monto:</label>
+              <input type="number" ng-model="actividad.monto" class="form-control" id="" placeholder="ingresa el monto" required>
+          </div> 
+          <div class="form-group">
+              <label for="">Municipio:</label>
+              <input class="form-control" ng-model="actividad.municipio" google-places/>
+              <!-- <input type="text" class="form-control" id="" placeholder="ingresa tu password" required> -->
+          </div>
+          <button type="submit" class="col-xs-offset-10 btn btn-primary" ng-click="insertActivity(actividad)">Entrar</button>
+      </form>
+  </div>
+</div>

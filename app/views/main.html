@@ -1,0 +1,39 @@
+<div class="jumbotron" ng-show="statusLogin">
+  <form action="" method="POST" role="form">
+    <legend>Login</legend>
+    <div class="form-group">
+      <label for="">User:</label>
+      <input type="text" class="form-control" id="" placeholder="Ingresa tu usuario" required>
+    </div> 
+    <div class="form-group">
+      <label for="">password:</label>
+      <input type="text" class="form-control" id="" placeholder="ingresa tu password" required>
+    </div>
+    <a ng-click="statusLogin= !statusLogin">Registrarse</a>
+    <button type="submit" class="col-xs-offset-10 btn btn-primary">Entrar</button>
+  </form>
+</div>
+<div class="jumbotron" ng-show="!statusLogin">
+  <form action="" method="POST" role="form">
+    <legend>Registro</legend>
+    <div class="form-group">
+      <label for="">User:</label>
+      <input type="text" class="form-control" id="" placeholder="Ingresa tu usuario" required>
+    </div> 
+    <div class="form-group">
+      <label for="">password:</label>
+      <input type="text" class="form-control" id="" placeholder="ingresa tu password" required>
+    </div>  
+    <p>Tipo de rol</p>
+    <div class="form-group col-xs-offset-1">
+      <label class="radio">
+        <input type="radio" name="rol">Capturista
+      </label> 
+      <label class="radio">
+        <input type="radio" name="rol">Autorizador
+      </label>
+    </div>
+    <a ng-click="statusLogin= !statusLogin">Regresar</a>
+    <button type="submit" class="col-xs-offset-8 btn btn-primary">Entrar</button>
+  </form>
+</div>
